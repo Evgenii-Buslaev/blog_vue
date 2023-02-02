@@ -16,7 +16,6 @@ export default {
       posts: [],
     };
   },
-
   methods: {
     createPost(post) {
       console.log(post);
