@@ -1,11 +1,13 @@
 <template>
   <navigation-bar></navigation-bar>
+  <post-form></post-form>
 </template>
 
 <script>
 import NavigationBar from "@/components/NavigationBar.vue";
+import PostForm from "./components/PostForm.vue";
 export default {
-  components: { NavigationBar },
+  components: { NavigationBar, PostForm },
 };
 </script>
 <style lang="scss">
