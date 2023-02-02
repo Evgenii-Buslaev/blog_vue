@@ -1,15 +1,31 @@
 <template>
   <navigation-bar></navigation-bar>
-  <post-form></post-form>
+  <post-form @create="createPost"></post-form>
+  <post-list :posts="posts"></post-list>
 </template>
 
 <script>
 import NavigationBar from "@/components/NavigationBar.vue";
 import PostForm from "./components/PostForm.vue";
+import PostList from "./components/PostList.vue";
+
 export default {
-  components: { NavigationBar, PostForm },
+  components: { NavigationBar, PostForm, PostList },
+  data() {
+    return {
+      posts: [],
+    };
+  },
+
+  methods: {
+    createPost(post) {
+      console.log(post);
+      this.posts.push(post);
+    },
+  },
 };
 </script>
+
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap");
 

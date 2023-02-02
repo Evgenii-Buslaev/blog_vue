@@ -23,7 +23,9 @@ export default {
         createdAt: Date.now(),
         id: Date.now(),
       };
-      console.log(post);
+      this.$emit("create", post);
+      this.title = "";
+      this.body = "";
     },
   },
 };
