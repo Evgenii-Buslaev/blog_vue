@@ -8,17 +8,17 @@
 import NavigationBar from "@/components/NavigationBar.vue";
 import PostForm from "./components/PostForm.vue";
 import PostList from "./components/PostList.vue";
+import { usePosts } from "@/hooks/usePosts.js";
 
 export default {
   components: { NavigationBar, PostForm, PostList },
-  data() {
-    return {
-      posts: [],
-    };
+  setup() {
+    const { posts } = usePosts();
+    return { posts };
   },
+
   methods: {
     createPost(post) {
-      console.log(post);
       this.posts.push(post);
     },
   },
