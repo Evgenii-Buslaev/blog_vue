@@ -1,7 +1,10 @@
 <template>
-  <div class="list__item">
-    <div>{{ post.title }}</div>
-    <div>{{ post.body }}</div>
+  <div class="list-item">
+    <div class="list-item__text">
+      <div>{{ post.title }}</div>
+      <div>{{ post.body }}</div>
+    </div>
+    <btn-el @click="$emit('remove', post)" class="delete-btn">Удалить</btn-el>
   </div>
 </template>
 
@@ -17,15 +20,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.list__item {
+.list-item {
   width: auto;
   height: auto;
   margin: 15px;
   padding: 15px;
   border: 2px solid teal;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item__text {
+  width: 90%;
 }
 </style>

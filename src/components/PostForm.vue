@@ -35,7 +35,7 @@ export default {
 .postForm {
   margin: 15px auto;
   width: 300px;
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
